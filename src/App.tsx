@@ -2,7 +2,7 @@ import { FitAddon } from "xterm-addon-fit";
 import React, { useEffect, useRef } from "react";
 import { Terminal } from "xterm";
 import "xterm/css/xterm.css";
-import runGame from "./runGame.js";
+import runGame from "./runGame";
 
 export default () => {
   const div = useRef<HTMLDivElement>(null);

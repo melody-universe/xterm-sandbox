@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "vite",
-    "build": "node ./node_modules/esbuild/install.js && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "typewatch": "tsc --noEmit --watch"

@@ -1,6 +1,6 @@
 import ansi from "ansi-escape-sequences";
 import figlet from "figlet";
-import deltaCorpsPriest from "figlet/importable-fonts/Delta Corps Priest 1.js";
+import deltaCorpsPriest from "figlet/importable-fonts/Delta Corps Priest 1";
 import { Terminal } from "xterm";
 
 figlet.parseFont("Delta Corps Priest 1", deltaCorpsPriest);
