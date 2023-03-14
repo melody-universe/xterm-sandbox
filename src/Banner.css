@@ -1,0 +1,8 @@
+.Banner_Word {
+  float: left;
+  margin: 0;
+}
+
+.Banner_Word + .Banner_Word {
+  margin-left: 1em;
+}

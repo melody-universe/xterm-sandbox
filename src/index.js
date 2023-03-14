@@ -1,22 +1,23 @@
-import { Terminal } from "xterm";
-import { FitAddon } from "xterm-addon-fit";
-import "xterm/css/xterm.css";
-import runGame from "./runGame";
-import "./style.css";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Banner from "./Banner";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import Terminal from "./Terminal";
+import TerminalEntry from "./TerminalEntry";
+import Word from "./Word";
 
-const root = document.createElement("div");
-document.body.appendChild(root);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+    <Terminal>
+      <TerminalEntry>
+        <Banner>
+          <Word style={{ color: "goldenrod" }}>Wheat</Word> Hoarder
+        </Banner>
+      </TerminalEntry>
+    </Terminal>
+  </React.StrictMode>
+);
 
-const terminal = new Terminal();
-const fitAddon = new FitAddon();
-terminal.loadAddon(fitAddon);
-terminal.open(root);
-
-const fit = () => {
-  const dimensions = fitAddon.proposeDimensions();
-  terminal.resize(Math.max(dimensions.cols, 89), dimensions.rows);
-};
-fit();
-window.addEventListener("resize", fit);
-
-runGame(terminal);
+reportWebVitals();
