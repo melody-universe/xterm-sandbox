@@ -3,28 +3,22 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit",
-    "typewatch": "tsc --noEmit --watch"
+    "start": "webpack serve",
+    "build": "webpack"
   },
   "license": "MIT",
   "dependencies": {
     "ansi-escape-sequences": "^6.2.1",
     "figlet": "^1.5.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "xterm": "^5.1.0",
     "xterm-addon-fit": "^0.7.0"
   },
   "devDependencies": {
-    "@types/ansi-escape-sequences": "^4.0.0",
-    "@types/figlet": "^1.5.5",
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
-    "babel-preset-nano-react-app": "^0.1.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.2.1"
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.12.0"
   }
 }
