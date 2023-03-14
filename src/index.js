@@ -12,7 +12,10 @@ const fitAddon = new FitAddon();
 terminal.loadAddon(fitAddon);
 terminal.open(root);
 
-const fit = () => fitAddon.fit();
+const fit = () => {
+  const dimensions = fitAddon.proposeDimensions();
+  terminal.resize(Math.max(dimensions.cols, 89), dimensions.rows);
+};
 fit();
 window.addEventListener("resize", fit);
 
